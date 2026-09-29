@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Пакеты после запуска — open-sites.io</title>
+<meta name="description" content="Пакеты услуг после запуска сайта: Карты и отзывы, ИИ-консультант, запись и возврат клиентов, Instagram, помощник владельца.">
+<link rel="icon" href="https://open-sites.io/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0d;--surface:#101014;--surface-2:#16161c;--border:rgba(255,255,255,.07);--text:#ededf0;
+  --silver:#c7cad3;--muted:#8b8f9c;--violet:#a78bfa;--grad:linear-gradient(100deg,#e4defc 0%,#a78bfa 100%);
+  --font-head:"Space Grotesk",sans-serif;--font-body:"Inter",sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.6;overflow-x:hidden}
+::selection{background:rgba(167,139,250,.3)}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.wrap{width:min(1140px,92vw);margin:0 auto}
+h1,h2,h3{font-family:var(--font-head);font-weight:600;line-height:1.15}
+h1{font-size:clamp(32px,5vw,54px);letter-spacing:-1px}
+h2{font-size:clamp(24px,3.4vw,36px);letter-spacing:-.5px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.blobs{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(110px);opacity:.14}
+.blob-1{width:520px;height:520px;background:#6d28d9;top:-140px;left:-120px;animation:drift1 34s ease-in-out infinite alternate}
+.blob-2{width:400px;height:400px;background:#3b4a6b;top:34%;right:-160px;animation:drift2 30s ease-in-out infinite alternate}
+.blob-3{width:300px;height:300px;background:#4c1d95;bottom:-100px;left:30%;opacity:.1;animation:drift3 38s ease-in-out infinite alternate}
+@keyframes drift1{to{transform:translate(140px,110px) scale(1.15)}}
+@keyframes drift2{to{transform:translate(-120px,-90px) scale(1.2)}}
+@keyframes drift3{to{transform:translate(90px,-130px) scale(.9)}}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+.nav.scrolled{background:rgba(8,8,11,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{display:inline-flex;align-items:center;gap:.42em;font-family:var(--font-head);font-size:17px;font-weight:600;letter-spacing:-.3px;line-height:1}
+.logo svg{width:1.85em;height:1.2em;flex:none;overflow:visible}
+.logo .pl{fill:currentColor}.logo .dk{fill:var(--violet)}
+.logo .t{color:var(--violet)}
+.nav-right{display:flex;align-items:center;gap:26px}
+.nav-right>a:not(.btn){font-size:14.5px;color:var(--silver);transition:color .2s}
+.nav-right>a:not(.btn):hover{color:#fff}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:100px;padding:15px 30px;
+  font-size:15px;font-weight:600;border:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-sm{padding:10px 22px;font-size:14px}
+.btn-primary{background:#f2f2f4;color:#0a0a0d}
+.btn-primary:hover{background:#fff;box-shadow:0 12px 34px rgba(0,0,0,.45)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.2)}
+.btn-ghost:hover{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.3)}
+.btn:focus-visible,.tcur__b:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+
+.section{padding:96px 0 0;position:relative}
+.hero{padding-top:150px}
+.sec-tag{display:inline-block;font-size:11.5px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);
+  border:1px solid var(--border);border-radius:100px;padding:6px 16px;margin-bottom:20px}
+.sec-sub{color:var(--muted);max-width:600px;margin-top:16px;font-size:17px}
+.thead{display:flex;align-items:flex-end;justify-content:space-between;gap:18px 28px;flex-wrap:wrap}
+
+.tcur{display:inline-flex;align-items:center;gap:2px;padding:3px 3px 3px 12px;border-radius:100px;
+  border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04)}
+.tcur__l{font-size:12.5px;color:var(--silver);margin-right:4px}
+.tcur__b{position:relative;width:26px;height:26px;border-radius:50%;border:0;background:none;color:var(--silver);
+  font:inherit;font-size:13px;font-weight:600;display:grid;place-items:center;transition:background .2s,color .2s}
+.tcur__b::after{content:"";position:absolute;inset:-7px -2px}
+.tcur__b:hover{background:rgba(255,255,255,.08);color:#fff}
+.tcur__b.on{background:var(--grad);color:#0a0a0d}
+
+.tstage{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;margin-top:30px;align-items:stretch}
+.tcard{position:relative;display:flex;flex-direction:column;padding:22px 24px;border-radius:18px;
+  border:1px solid rgba(255,255,255,.11);
+  background:radial-gradient(130% 55% at 14% 0%,rgba(255,255,255,.07),rgba(255,255,255,0) 62%),
+    linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 38%),var(--surface);
+  box-shadow:inset 1px 1px 0 rgba(255,255,255,.1),inset 0 1px 0 rgba(255,255,255,.08),inset -1px -1px 0 rgba(0,0,0,.5),
+    0 1px 0 #2a2934,0 2px 0 #25242e,0 3px 0 #201f28,0 4px 0 #1c1b23,0 5px 0 #18171e,0 6px 0 #15141a,
+    0 26px 36px -12px rgba(0,0,0,.85)}
+.tcard--hot{border-color:rgba(167,139,250,.5);
+  background:radial-gradient(130% 55% at 14% 0%,rgba(196,181,253,.12),rgba(167,139,250,0) 62%),
+    linear-gradient(180deg,rgba(167,139,250,.1),rgba(167,139,250,0) 45%),var(--surface-2);
+  box-shadow:inset 1px 1px 0 rgba(255,255,255,.12),inset 0 1px 0 rgba(255,255,255,.1),inset -1px -1px 0 rgba(0,0,0,.5),
+    0 0 0 1px rgba(167,139,250,.18),0 1px 0 #3a3058,0 2px 0 #332a4d,0 3px 0 #2c2442,0 4px 0 #251f37,0 5px 0 #1f1a2d,
+    0 6px 0 #1a1625,0 40px 90px -34px rgba(124,92,246,.5)}
+.tcard__badge{align-self:flex-start;font-size:11.5px;font-weight:600;letter-spacing:.02em;color:var(--silver);
+  border:1px solid rgba(255,255,255,.14);border-radius:100px;padding:4px 11px}
+.tcard--hot .tcard__badge{background:var(--grad);color:#0a0a0d;border-color:transparent}
+.tcard__name{font-size:21px;letter-spacing:-.3px;margin:14px 0 0}
+.tcard__for{color:var(--muted);font-size:13.5px;line-height:1.45;margin:6px 0 0}
+.tcard__price{display:flex;align-items:baseline;gap:8px;margin-top:18px;min-height:36px}
+.tcard__now{font-family:var(--font-head);font-size:32px;font-weight:600;letter-spacing:-.8px;line-height:1;color:#fff;white-space:nowrap}
+.tcard__per{color:var(--silver);font-size:14px}
+.pk-once{color:var(--muted);font-size:13px;margin-top:8px}
+.pk-once .m{color:var(--silver);font-weight:600}
+.tcard__list{list-style:none;padding:14px 0 0;margin:14px 0 20px;border-top:1px solid rgba(255,255,255,.08);
+  display:flex;flex-direction:column;gap:7px}
+.tcard__list li{display:flex;gap:9px;align-items:flex-start;color:var(--silver);font-size:13.5px;line-height:1.42}
+.tcard__list svg{flex:none;width:15px;height:15px;margin-top:2px;color:var(--violet)}
+.tcard__btn{margin-top:auto;width:100%;min-height:46px;text-align:center;font-size:14.5px;padding:12px 18px}
+.tcard--wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(260px,.9fr) 1.5fr;column-gap:36px;align-items:stretch}
+.tw-l,.tw-r{display:flex;flex-direction:column}
+.tcard--wide .tcard__list{margin-top:0;border-top:0;padding-top:4px;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px}
+.tcard--wide .tcard__btn{align-self:flex-start;width:auto;padding:12px 26px}
+
+.notes{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px 24px;margin-top:28px}
+.notes li{display:flex;gap:9px;color:var(--muted);font-size:13.5px;line-height:1.45}
+.notes svg{flex:none;width:15px;height:15px;margin-top:2px;color:var(--violet)}
+.notes .m{color:var(--silver)}
+
+.adgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:30px}
+.ad{display:flex;flex-direction:column;padding:20px 20px 18px;border-radius:16px;border:1px solid rgba(255,255,255,.09);
+  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,0) 60%),var(--surface);
+  transition:border-color .25s,transform .25s}
+.ad:hover{border-color:rgba(167,139,250,.35);transform:translateY(-2px)}
+.ad--wide{grid-column:span 2}
+.ad--wide .ad__list{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}
+.adgrid--two{grid-template-columns:repeat(auto-fill,minmax(420px,1fr))}
+.ad__top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.ad__ico{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:none;
+  background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.22);color:var(--violet)}
+.ad__ico svg{width:19px;height:19px}
+.ad__price{font-family:var(--font-head);font-size:19px;font-weight:600;color:#fff;text-align:right;white-space:nowrap}
+.ad__price--free{font-size:15px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ad__per{font-family:var(--font-body);font-size:12.5px;font-weight:500;color:var(--muted)}
+.ad__name{font-size:16.5px;letter-spacing:-.2px;margin-top:16px}
+.ad__note{color:var(--muted);font-size:13.5px;line-height:1.45;margin-top:6px}
+.ad__list{margin:12px 0 12px;padding-top:12px}
+.ad__pack{margin-top:auto;color:var(--silver);font-size:13.5px}
+.ad__pack .m{font-family:var(--font-head);color:#fff}
+
+.cta{margin:96px auto 0;padding:34px 34px;border-radius:22px;border:1px solid rgba(167,139,250,.35);
+  background:radial-gradient(120% 90% at 0% 0%,rgba(167,139,250,.14),rgba(167,139,250,0) 60%),var(--surface-2);
+  display:flex;align-items:center;justify-content:space-between;gap:20px 32px;flex-wrap:wrap}
+.cta p{color:var(--muted);margin-top:8px;max-width:520px}
+.foot{margin-top:80px;padding:28px 0 40px;border-top:1px solid var(--border);color:var(--muted);font-size:13.5px}
+.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:760px){
+  .nav-right>a:not(.btn){display:none}
+  .hero{padding-top:118px}
+  .section{padding-top:72px}
+  .ad--wide{grid-column:auto}
+  .ad--wide .ad__list{grid-template-columns:1fr}
+  .adgrid--two{grid-template-columns:1fr}
+  .tstage{grid-template-columns:1fr}
+  .tcard--wide{display:flex;flex-direction:column}
+  .tcard--wide .tcard__list{grid-template-columns:1fr;margin-top:14px;border-top:1px solid rgba(255,255,255,.08);padding-top:14px}
+  .tcard--wide .tcard__btn{width:100%}
+  .cta{padding:26px 22px}
+  .cta .btn{width:100%}
+}
+@media (max-width:380px){.tcard{padding:20px 18px}.btn{padding:14px 22px}}
+@media (prefers-reduced-motion:reduce){.blob{animation:none}.btn,.ad{transition:none}}
+</style>
+</head>
+<body>
+<div class="blobs" aria-hidden="true"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="https://open-sites.io/" aria-label="open-sites.io"><svg viewBox="4 22 56 36" aria-hidden="true"><rect class="pl" x="11" y="34" width="7" height="21" rx="2"/><rect class="pl" x="46" y="34" width="7" height="21" rx="2"/><rect class="dk" x="6" y="26" width="52" height="8" rx="4"/></svg><span>open-sites<span class="t">.io</span></span></a>
+    <div class="nav-right">
+      <a href="https://open-sites.io/#tariffs">Тарифы на сайты</a>
+      <a class="btn btn-primary btn-sm" href="https://t.me/opensites_io" target="_blank" rel="noopener">Оставить заявку</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section hero" id="packs">
+    <div class="wrap">
+      <span class="sec-tag">После запуска</span>
+      <div class="thead">
+        <div>
+          <h1>Сайт готов. <span class="grad-text">Дальше&nbsp;— клиенты</span></h1>
+          <p class="sec-sub">Каждый пакет решает одну задачу, поддержка сайта уже внутри. Цену называем до начала и не меняем по ходу работы.</p>
+        </div>
+        <div class="tcur" role="group" aria-label="Валюта цен"><span class="tcur__l">Цены в</span><button type="button" class="tcur__b on" data-cur="usd" aria-pressed="true">$</button><button type="button" class="tcur__b" data-cur="gel" aria-pressed="false">₾</button><button type="button" class="tcur__b" data-cur="rub" aria-pressed="false">₽</button></div>
+      </div>
+      <div class="tstage">
+        <article class="tcard tcard--hot">
+          <span class="tcard__badge">Первый шаг после сайта</span>
+          <h3 class="tcard__name">«Точка на карте»</h3>
+          <p class="tcard__for">Для тех, кого пока трудно найти в Google Картах.</p>
+          <div class="tcard__price"><b class="m tcard__now" data-gel="390 ₾" data-usd="$145" data-rub="11 900 ₽">$145</b><span class="tcard__per">разово</span></div>
+          <p class="pk-once">Без абонентской платы</p>
+          <ul class="tcard__list">
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Создаём или приводим в порядок карточку в Google Картах</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Подтверждаем, что бизнес ваш, и заполняем на трёх языках</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Услуги, цены, часы работы и фото прямо в карточке</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Короткая ссылка и QR-код, чтобы клиенту было легко оставить отзыв</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Таблички на стойку и текст просьбы для администратора</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Карточка ведёт на сайт, а кнопка на сайте прокладывает маршрут к вам</span></li>
+          </ul>
+          <a class="btn btn-primary tcard__btn" href="https://t.me/opensites_io" target="_blank" rel="noopener"><span>Заказать за <b class="m" data-gel="390 ₾" data-usd="$145" data-rub="11 900 ₽">$145</b></span></a>
+        </article>
+        <article class="tcard">
+          <span class="tcard__badge">Чтобы находили</span>
+          <h3 class="tcard__name">«Свет в окне»</h3>
+          <p class="tcard__for">Чтобы вас чаще находили в Картах, в поиске и в ответах нейросетей.</p>
+          <div class="tcard__price"><b class="m tcard__now" data-gel="240 ₾" data-usd="$89" data-rub="7 300 ₽">$89</b><span class="tcard__per">в месяц</span></div>
+          <p class="pk-once">Без разовой оплаты</p>
+          <ul class="tcard__list">
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Четыре поста в месяц и новые фото в карточке Google</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ответы на все отзывы, хорошие и плохие</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Пять-шесть местных справочников с одинаковыми адресом и часами</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Разметка и ответы на частые вопросы, чтобы сайт понимали нейросети</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Праздничные часы и новые цены везде в один день</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Отчёт раз в месяц о показах, звонках и маршрутах</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Поддержка сайта «Под присмотром» уже внутри</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Если карточки ещё нет, начинаем с «Точки на карте»</span></li>
+          </ul>
+          <a class="btn btn-ghost tcard__btn" href="https://t.me/opensites_io" target="_blank" rel="noopener"><span>Подключить за <b class="m" data-gel="240 ₾" data-usd="$89" data-rub="7 300 ₽">$89</b>/мес</span></a>
+        </article>
+        <article class="tcard">
+          <span class="tcard__badge">Чтобы не терять заявки</span>
+          <h3 class="tcard__name">«Без выходных»</h3>
+          <p class="tcard__for">Для тех, кто теряет заявки вечером и в выходные.</p>
+          <div class="tcard__price"><b class="m tcard__now" data-gel="120 ₾" data-usd="$45" data-rub="3 600 ₽">$45</b><span class="tcard__per">в месяц</span></div>
+          <p class="pk-once">Подключение <b class="m" data-gel="290 ₾" data-usd="$109" data-rub="8 900 ₽">$109</b></p>
+          <ul class="tcard__list">
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>ИИ-консультант на сайте отвечает круглосуточно</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Тот же помощник в Telegram, в боте или в вашем аккаунте с Telegram Premium</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Отвечает на языке клиента, в том числе на английском и грузинском</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Знает ваши цены и условия и ничего не выдумывает</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Сложный вопрос сразу передаёт вам</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Заявка с именем, телефоном и услугой приходит вам в Telegram</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Каждый месяц обновляем цены и акции и разбираем неудачные ответы</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Instagram Direct или WhatsApp по желанию, <b class="m" data-gel="150 ₾" data-usd="$56" data-rub="4 500 ₽">$56</b> за канал</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Поддержка сайта «Под присмотром» уже внутри</span></li>
+          </ul>
+          <a class="btn btn-ghost tcard__btn" href="https://t.me/opensites_io" target="_blank" rel="noopener"><span>Подключить за <b class="m" data-gel="120 ₾" data-usd="$45" data-rub="3 600 ₽">$45</b>/мес</span></a>
+        </article>
+        <article class="tcard">
+          <span class="tcard__badge">Чтобы возвращались</span>
+          <h3 class="tcard__name">«Свои люди»</h3>
+          <p class="tcard__for">Для салонов и студий, которые держатся на постоянных клиентах.</p>
+          <div class="tcard__price"><b class="m tcard__now" data-gel="220 ₾" data-usd="$82" data-rub="6 700 ₽">$82</b><span class="tcard__per">в месяц</span></div>
+          <p class="pk-once">Подключение <b class="m" data-gel="490 ₾" data-usd="$185" data-rub="14 900 ₽">$185</b></p>
+          <ul class="tcard__list">
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Онлайн-запись в Altegio или Fresha с кнопкой на сайте, в Картах и в Instagram</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Напоминание за день и за два часа и подтверждение визита</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Освободилось окно, и его сразу предлагают тем, кто ждёт</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Напоминание, когда подходит срок повторить услугу</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Карта лояльности в Telegram</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>При записи предлагаем подходящую услугу к основной</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Предоплата за дорогие услуги, если она вам нужна</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Согласия клиентов на сообщения и политика по закону</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Поддержка сайта «Под присмотром» уже внутри</span></li>
+          </ul>
+          <a class="btn btn-ghost tcard__btn" href="https://t.me/opensites_io" target="_blank" rel="noopener"><span>Подключить за <b class="m" data-gel="220 ₾" data-usd="$82" data-rub="6 700 ₽">$82</b>/мес</span></a>
+        </article>
+        <article class="tcard">
+          <span class="tcard__badge">Чтобы Instagram жил</span>
+          <h3 class="tcard__name">«Живая лента»</h3>
+          <p class="tcard__for">Для тех, у кого фото работ в телефоне, а времени на Instagram нет.</p>
+          <div class="tcard__price"><b class="m tcard__now" data-gel="290 ₾" data-usd="$109" data-rub="8 900 ₽">$109</b><span class="tcard__per">в месяц</span></div>
+          <p class="pk-once">Оформление <b class="m" data-gel="190 ₾" data-usd="$71" data-rub="5 800 ₽">$71</b></p>
+          <ul class="tcard__list">
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Шапка профиля, обложки «Актуального» и ссылка на сайт</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>12 постов и 12 сторис в месяц по плану</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Делаем из ваших фото и видео, работы нейросеть не рисует</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Те же новости появляются в карточке Google</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Цены, акции и новые работы на сайте всегда свежие</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Отчёт раз в месяц об охвате, переходах на сайт и заявках</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Поддержка сайта «Под присмотром» уже внутри</span></li>
+          </ul>
+          <a class="btn btn-ghost tcard__btn" href="https://t.me/opensites_io" target="_blank" rel="noopener"><span>Подключить за <b class="m" data-gel="290 ₾" data-usd="$109" data-rub="8 900 ₽">$109</b>/мес</span></a>
+        </article>
+        <article class="tcard">
+          <span class="tcard__badge">Чтобы меньше рутины</span>
+          <h3 class="tcard__name">«Правая рука»</h3>
+          <p class="tcard__for">Для владельца, который хочет знать о делах всё за пять минут в день.</p>
+          <div class="tcard__price"><b class="m tcard__now" data-gel="290 ₾" data-usd="$109" data-rub="8 900 ₽">$109</b><span class="tcard__per">в месяц</span></div>
+          <p class="pk-once">Подключение <b class="m" data-gel="290 ₾" data-usd="$109" data-rub="8 900 ₽">$109</b></p>
+          <ul class="tcard__list">
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>ИИ-помощник в Telegram каждое утро присылает новые заявки и тех, кто ждёт ответа</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Черновики ответов на отзывы и сообщения, отправка одним нажатием</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Раз в неделю цифры сайта о посетителях, источниках и заявках</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Раз в неделю сводка об отзывах, ценах, акциях и постах 5–10 соседей</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Раз в месяц разбор отзывов о том, за что хвалят и на что жалуются</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Один проверенный приём в неделю для вашей ниши</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Поддержка сайта «Под присмотром» уже внутри</span></li>
+          </ul>
+          <a class="btn btn-ghost tcard__btn" href="https://t.me/opensites_io" target="_blank" rel="noopener"><span>Подключить за <b class="m" data-gel="290 ₾" data-usd="$109" data-rub="8 900 ₽">$109</b>/мес</span></a>
+        </article>
+        <article class="tcard tcard--wide">
+        <div class="tw-l">
+          <span class="tcard__badge">Два пакета вместе</span>
+          <h3 class="tcard__name">«Полный штат»</h3>
+          <p class="tcard__for">Помощник владельца и Instagram под ключ в одном пакете.</p>
+          <div class="tcard__price"><b class="m tcard__now" data-gel="490 ₾" data-usd="$185" data-rub="14 900 ₽">$185</b><span class="tcard__per">в месяц</span></div>
+          <p class="pk-once">Подключение <b class="m" data-gel="480 ₾" data-usd="$179" data-rub="14 600 ₽">$179</b></p>
+        </div>
+        <div class="tw-r">
+          <ul class="tcard__list">
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Всё из «Правой руки»</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Всё из «Живой ленты»</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Абонентская плата на 15% ниже, чем у двух пакетов по отдельности</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Один контакт по всем вопросам</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Поддержка сайта «Под присмотром» уже внутри</span></li>
+          </ul>
+          <a class="btn btn-ghost tcard__btn" href="https://t.me/opensites_io" target="_blank" rel="noopener"><span>Подключить за <b class="m" data-gel="490 ₾" data-usd="$185" data-rub="14 900 ₽">$185</b>/мес</span></a>
+        </div>
+        </article>
+      </div>
+      <ul class="notes">
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Поддержка сайта «Под присмотром» входит в каждый пакет с абонентской платой. Отдельно она стоит <b class="m" data-gel="60 ₾" data-usd="$22" data-rub="1 800 ₽">$22</b> в месяц.</span></li>
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Абонентскую плату берём от трёх месяцев.</span></li>
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Если берёте два пакета, абонентская плата на 15% ниже.</span></li>
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Для клиентов из России вместо Google, Instagram и WhatsApp работаем с Яндекс Картами, 2ГИС, VK и MAX.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="addons">
+    <div class="wrap">
+      <span class="sec-tag">Отдельно</span>
+      <h2>Добавить к сайту</h2>
+      <p class="sec-sub">Небольшие работы, которые можно заказать без пакета.</p>
+      <div class="adgrid">
+        <article class="ad">
+          <div class="ad__top"><span class="ad__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 3.6 9A14 14 0 0 1 12 21a14 14 0 0 1-3.6-9A14 14 0 0 1 12 3z"/></svg></span><span class="ad__price"><b class="m" data-gel="79 ₾" data-usd="$29" data-rub="2 400 ₽">$29</b></span></div>
+          <h3 class="ad__name">Ещё один язык сайта</h3>
+          <p class="ad__note">Отдельный адрес для языка, чтобы Google показывал нужную версию.</p>
+        </article>
+        <article class="ad">
+          <div class="ad__top"><span class="ad__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><span class="ad__price"><b class="m" data-gel="100 ₾" data-usd="$37" data-rub="3 000 ₽">$37</b></span></div>
+          <h3 class="ad__name">Страница под услугу или акцию</h3>
+          <p class="ad__note">Своя страница с ценой, фото и записью для рекламы и постов.</p>
+        </article>
+        <article class="ad">
+          <div class="ad__top"><span class="ad__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><span class="ad__price"><b class="m" data-gel="100 ₾" data-usd="$37" data-rub="3 000 ₽">$37</b></span></div>
+          <h3 class="ad__name">Страница «Работа у нас»</h3>
+          <p class="ad__note">Вакансии и короткая анкета, отклики приходят вам в Telegram.</p>
+        </article>
+        <article class="ad">
+          <div class="ad__top"><span class="ad__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5A2.1 2.1 0 0 0 16.5 4.5L13 8 4.8 6.2l-1.6 1.6 6.6 3.4L6.5 14.5 4 14l-1 1 3.5 2 2 3.5 1-1-.5-2.5 3.3-3.3 3.4 6.6z"/></svg></span><span class="ad__price"><b class="m" data-gel="190 ₾" data-usd="$71" data-rub="5 800 ₽">$71</b></span></div>
+          <h3 class="ad__name">Страница для туристов</h3>
+          <p class="ad__note">Английская страница и таблички с QR-кодом для отелей и гидов.</p>
+        </article>
+        <article class="ad">
+          <div class="ad__top"><span class="ad__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7"/><path d="M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg></span><span class="ad__price"><b class="m" data-gel="290 ₾" data-usd="$109" data-rub="8 900 ₽">$109</b></span></div>
+          <h3 class="ad__name">Подарочные сертификаты</h3>
+          <p class="ad__note">Сертификат покупают на сайте картой, деньги приходят заранее.</p>
+        </article>
+        <article class="ad">
+          <div class="ad__top"><span class="ad__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM18 18h3v3h-3zM18 14h3M14 18v3"/></svg></span><span class="ad__price"><b class="m" data-gel="190 ₾" data-usd="$71" data-rub="5 800 ₽">$71</b></span></div>
+          <h3 class="ad__name">QR-меню для кафе</h3>
+          <p class="ad__note">Меню на трёх-четырёх языках открывается с телефона гостя.</p>
+        </article>
+        <article class="ad ad--wide">
+          <div class="ad__top"><span class="ad__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 3v18M17 3v18M3 8h4M3 16h4M17 8h4M17 16h4M3 12h18"/></svg></span><span class="ad__price"><b class="m" data-gel="35 ₾" data-usd="$13" data-rub="1 100 ₽">$13</b><span class="ad__per"> за ролик</span></span></div>
+          <h3 class="ad__name">Ролик для Reels</h3>
+          <ul class="tcard__list ad__list">
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>15–30 секунд, вертикально, для Reels и сторис</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Из 5–10 коротких видео, которые вы сняли на телефон</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Монтаж, ускорение, крупные субтитры, обложка и подпись</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.4 12.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Людей и ваши работы нейросеть не рисует</span></li>
+          </ul>
+          <p class="ad__pack">Пакет из четырёх роликов — <b class="m" data-gel="120 ₾" data-usd="$45" data-rub="3 600 ₽">$45</b><span class="ad__per"> в месяц</span></p>
+        </article>
+        <article class="ad">
+          <div class="ad__top"><span class="ad__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span class="ad__price"><b class="m" data-gel="190 ₾" data-usd="$71" data-rub="5 800 ₽">$71</b> + <b class="m" data-gel="90 ₾" data-usd="$34" data-rub="2 700 ₽">$34</b><span class="ad__per"> в месяц</span></span></div>
+          <h3 class="ad__name">Аналитика «Цифры»</h3>
+          <p class="ad__note">Откуда приходят люди и что нажимают, сводка раз в неделю.</p>
+        </article>
+        <article class="ad">
+          <div class="ad__top"><span class="ad__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="ad__price"><b class="m" data-gel="90 ₾" data-usd="$34" data-rub="2 700 ₽">$34</b><span class="ad__per"> в месяц</span></span></div>
+          <h3 class="ad__name">Конкуренты «Соседи»</h3>
+          <p class="ad__note">Раз в неделю отзывы, цены, акции и посты 5–10 соседей.</p>
+        </article>
+        <article class="ad">
+          <div class="ad__top"><span class="ad__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="ad__price"><b class="m" data-gel="190 ₾" data-usd="$71" data-rub="5 800 ₽">$71</b></span></div>
+          <h3 class="ad__name">Согласия и политика</h3>
+          <p class="ad__note">Документы, без которых нельзя собирать контакты и делать рассылки.</p>
+        </article>
+        <article class="ad">
+          <div class="ad__top"><span class="ad__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="ad__price"><b class="m" data-gel="270 ₾" data-usd="$99" data-rub="8 200 ₽">$99</b></span></div>
+          <h3 class="ad__name">5 часов доработок</h3>
+          <p class="ad__note">Новый раздел, акция или большая правка сверх поддержки.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="free">
+    <div class="wrap">
+      <span class="sec-tag">Бесплатно</span>
+      <h2>С чего начать разговор</h2>
+      <div class="adgrid adgrid--two">
+        <article class="ad ad--free">
+          <div class="ad__top"><span class="ad__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><span class="ad__price ad__price--free">Бесплатно</span></div>
+          <h3 class="ad__name">Разбор «как вас видно в интернете»</h3>
+          <p class="ad__note">Покажем цифрами, где вас находят и где теряют клиентов.</p>
+        </article>
+        <article class="ad ad--free">
+          <div class="ad__top"><span class="ad__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></span><span class="ad__price ad__price--free">Бесплатно</span></div>
+          <h3 class="ad__name">Проверка скорости ответа</h3>
+          <p class="ad__note">Узнаем, как быстро вам отвечают в Instagram, WhatsApp и Telegram.</p>
+        </article>
+      </div>
+      <div class="cta">
+        <div>
+          <h2>Не знаете, какой пакет нужен?</h2>
+          <p>Напишите, чем занимаетесь, и мы предложим один пакет под вашу задачу.</p>
+        </div>
+        <a class="btn btn-primary" href="https://t.me/opensites_io" target="_blank" rel="noopener">Написать в Telegram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap"><span>open-sites.io</span><a href="https://t.me/opensites_io" target="_blank" rel="noopener">Telegram @opensites_io</a></div>
+</footer>
+<script>
+(function(){
+  var KEY='os_pkcur', cur='usd';
+  try{var s=localStorage.getItem(KEY); if(s==='gel'||s==='usd'||s==='rub') cur=s;}catch(e){}
+  function apply(c){
+    cur=c;
+    document.querySelectorAll('[data-gel]').forEach(function(el){ el.textContent=el.getAttribute('data-'+c); });
+    document.querySelectorAll('.tcur__b').forEach(function(b){
+      var on=b.getAttribute('data-cur')===c; b.classList.toggle('on',on); b.setAttribute('aria-pressed',on?'true':'false');
+    });
+    try{localStorage.setItem(KEY,c);}catch(e){}
+  }
+  document.querySelectorAll('.tcur__b').forEach(function(b){
+    b.addEventListener('click',function(){ apply(b.getAttribute('data-cur')); });
+  });
+  apply(cur);
+  var nav=document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY>20); }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+})();
+</script>
+</body>
+</html>
